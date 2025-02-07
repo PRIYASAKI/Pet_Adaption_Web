@@ -97,7 +97,23 @@ A **😊Pet Adoption Website😊** that allows users to explore adoptable pets, 
 ---
 
 
-
 <img src= "./images/1-Homepage.png"/>
+
+---
+
+<img src= "./images/2-Signup.png"/>
+
+---
+
+<img src= "./images/3-Login.png"/>
+
+---
+
+<img src= "./images/4-PetList.png"/>
+
+---
+
+
+
 
 **✨ Minimal yet Effective Pet Adoption Website! 🚀**
