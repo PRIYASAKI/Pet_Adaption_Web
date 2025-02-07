@@ -1,21 +1,21 @@
 # 🐾 Pet Adoption Website Structure
 
 ## Overview
-A **Pet Adoption Website** that allows users to explore adoptable pets, learn about their care, and submit adoption applications. 
+A **😊Pet Adoption Website😊** that allows users to explore adoptable pets, learn about their care, and submit adoption applications.* 
 
-## Objective
+## 🐕Objective
 - Provide an easy-to-use platform for pet adoption.
 - Educate users on responsible pet care.
 - Streamline the adoption application process.
-- Connect adopters with animal shelters and rescue centers.
 
-## Project Workflow
+## 🐕🐶Project Workflow
 1. **User Visits the Home Page** → Sees featured pets & adoption stories.
 2. **Explores Pet Listings** → Searches and filters available pets.
 3. **Views Detailed Pet Profiles** → Reads pet details & requirements.
 4. **Submits Adoption Application** → Fills out an adoption form.
 5. **Application Processing** → Shelter reviews and responds.
-6. **Contact & Support** → Users can reach out for queries.
+6. **Login/Sign Up** → Users create an account to track applications.
+7. **Contact & Support** → Users can reach out for queries.
 
 ## Roles
 ### Customer (Adopter)
@@ -24,6 +24,7 @@ A **Pet Adoption Website** that allows users to explore adoptable pets, learn ab
 - **Apply for Adoption**: Submit an application for a pet.
 - **Read Pet Care Tips**: Access guides for responsible pet ownership.
 - **Contact Support**: Ask questions or request assistance.
+- **Create Account/Login**: Track application status and save favorites.
 
 ### Admin (Shelter/Rescue Center Staff)
 - **Manage Pet Listings**: Add, update, or remove pets.
@@ -31,20 +32,19 @@ A **Pet Adoption Website** that allows users to explore adoptable pets, learn ab
 - **Respond to Inquiries**: Answer questions from potential adopters.
 - **Update Pet Care Tips**: Maintain and add new content.
 - **Monitor Website Activity**: Ensure smooth operations and security.
+- **Manage User Accounts**: Approve, block, or manage adopters.
 
 ## Tech Stack
 - **Frontend**: HTML, CSS, JavaScript, React.js
 - **Backend**: Node.js, Express.js
-- **Database**: MongoDB / MySQL
-- **Authentication**: Firebase / JWT
-- **Hosting**: Vercel, Netlify, or Heroku
+- **Database**: MongoDB 
+- **Authentication**: JWT
 - **Version Control**: Git & GitHub
 
 ## 1. Home Page (Landing Page)
 - 🏡 **Welcome Message**: Brief introduction about pet adoption.
 - 🐶 **Featured Pets**: Showcase a few adoptable pets.
-- 🎉 **Success Stories**: Happy pet adoption stories.
-- 🔘 **Call-to-Action (CTA)**: "Find Your Perfect Pet."
+- 🔑 **Login/Sign Up Button** for user account access.
 
 ---
 
@@ -85,6 +85,14 @@ A **Pet Adoption Website** that allows users to explore adoptable pets, learn ab
 - 📍 **Shelter or Rescue Center Details**
 - 📧 **Contact Form**: Name, Email, Message.
 - 🗺️ **Google Maps Location** (optional).
+
+---
+
+## 7. Login & Sign-Up Page
+- 🔐 **User Registration**: Name, Email, Password.
+- 🔒 **Login Form**: Access existing accounts.
+- 🆘 **Password Reset**: Forgot password option.
+- 🛠️ **User Dashboard**: Track applications & favorites.
 
 ---
 
