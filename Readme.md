@@ -96,4 +96,6 @@ A **😊Pet Adoption Website😊** that allows users to explore adoptable pets, 
 
 ---
 
+updated version
+
 **✨ Minimal yet Effective Pet Adoption Website! 🚀**
