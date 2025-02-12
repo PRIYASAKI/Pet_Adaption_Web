@@ -1,0 +1,148 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spreads elements out */
+  padding: 15px 15px;
+  background-color: #333;
+  color: white;
+  margin-top: 0px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-left: 700px; /* Pushes nav links to the right */
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.logo-container img {
+  width: 60px;  /* Adjust size as needed */
+  height: 60px; /* Ensures the aspect ratio remains a perfect circle */
+  border-radius: 50%; /* Makes it circular */
+  object-fit: cover; /* Ensures the image fills the circle properly */
+}
+
+
+.login-btn {
+  padding: 10px 20px;
+  background-color: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-right: 50px; 
+}
+
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Moves text left and image right */
+  padding: 50px 100px; /* Adds space after navbar */
+  margin-top: 0px; /* Adds space below navbar */
+  background-color: paleturquoise;
+    min-height: calc(50vh - 500px); /* Adjust based on navbar/footer height */
+  }
+  
+  
+
+.hero-text {
+  margin-left: 200px;
+  font-size: 25px;
+   /* Prevents text from stretching */
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  margin-left: 350px;
+  margin-top: 130px;
+   /* Moves image to right */
+}
+
+.hero-image {
+  width: 400px; /* Adjust size as needed */
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+   /* Optional: rounded edges */
+}
+
+.cta-btn {
+  padding: 20px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  margin-left: 210px;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 200vh; /* Makes it take the full screen height */
+}
+
+.content {
+  min-height: auto; 
+  background-color: paleturquoise;
+}
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 40px;
+  margin-top: 00px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 10px 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  
+}
+
+.socials span {
+  margin: 0 10px;
+  font-size: 30px;
+}
