@@ -1,3 +1,8 @@
+import React from 'react';
+import './styles.css';
+import logo from '../assets/logo.jpg';
+import logo_1 from '../assets/logo_1.jpg';
+
 const App = () => {
     return (
         <div className="app-container">
@@ -50,3 +55,5 @@ const App = () => {
         </div>
     );
 };
+
+export default App;

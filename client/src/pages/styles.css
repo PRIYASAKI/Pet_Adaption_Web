@@ -97,20 +97,6 @@ body {
   border-radius: 5px;
   margin-left: 210px;
 }
-
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 200vh; /* Makes it take the full screen height */
-}
-
-.content {
-  min-height: auto; 
-  background-color: paleturquoise;
-}
-
-
-
 html, body {
   height: 100%;
   margin: 0;
@@ -119,14 +105,23 @@ html, body {
   flex-direction: column;
 }
 
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Change from 200vh to 100vh */
+}
 
-/* Footer */
+.content {
+  flex: 1; /* Pushes footer down naturally */
+  background-color: paleturquoise;
+}
+
 .footer {
   background-color: #222;
   color: white;
   text-align: center;
   padding: 40px;
-  margin-top: 00px;
+  margin: 0; /* Remove extra margins */
 }
 
 .footer-links {
@@ -144,5 +139,5 @@ html, body {
 
 .socials span {
   margin: 0 10px;
-  font-size: 30px;
+  font-size: 20px;
 }
