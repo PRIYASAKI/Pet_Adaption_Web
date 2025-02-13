@@ -7,7 +7,10 @@ import PetProfile from "./pages/PetProfile";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Navbar from "./components/Navbar";
+
+import PetCareTips from "./pages/PetCareTips";
+import Application from "./pages/Application";
+
 
 function App() {
   return (
@@ -15,6 +18,8 @@ function App() {
       {/* Only render the Navbar on Home page */}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/petscare" element={<PetCareTips />} />
+        <Route path="/application" element={<Application />} />
         <Route path="/pets" element={<PetList />} />
         <Route path="/pets/:id" element={<PetProfile />} />
         <Route path="/contact" element={<Contact />} />
