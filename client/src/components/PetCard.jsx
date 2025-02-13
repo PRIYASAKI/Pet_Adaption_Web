@@ -7,7 +7,7 @@ function PetCard({ pet }) {
       <img src={pet.image} alt={pet.name} />
       <h3>{pet.name}</h3>
       <p>{pet.breed} - {pet.age} years old</p>
-      <Link to={`/pets/${pet.id}`} className="btn">View Details</Link>
+      <Link to={`/pets/${pet.id}`} className="btn">Show Details</Link>
     </div>
   );
 }
