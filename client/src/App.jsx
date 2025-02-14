@@ -11,6 +11,10 @@ import Signup from "./pages/Signup";
 import PetCareTips from "./pages/PetCareTips";
 import Application from "./pages/Application";
 
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
+
 
 function App() {
   return (
@@ -21,7 +25,7 @@ function App() {
         <Route path="/petscare" element={<PetCareTips />} />
         <Route path="/application" element={<Application />} />
         <Route path="/pets" element={<PetList />} />
-        <Route path="/pets/:id" element={<PetProfile />} />
+        <Route path="/pet-profile/:petType" element={<PetProfile />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />

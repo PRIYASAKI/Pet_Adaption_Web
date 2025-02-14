@@ -1,9 +1,18 @@
 import React from "react";
 import "./styles.css";
 import dog from "../assets/dog.webp";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  return (
+
+  const navigate=useNavigate();
+  
+  const handleLogin=(event)=>{
+    event.preventDefault();
+    alert("Logged in successfully");
+    navigate("/");
+  }
+    return (
     <div className="login-container">
       
       <div className="image-section">
@@ -13,7 +22,7 @@ const Login = () => {
       </div>
       <div className="login-section">
         <h2 className="login-title">Login form</h2>
-        <form className="login-form">
+        <form className="login-form" onSubmit={handleLogin}>
           <div className="input-group">
             <span className="icon">📧</span>
             <input type="email" placeholder="Email" />
@@ -25,7 +34,7 @@ const Login = () => {
           <button className="login-button">Login</button>
         </form>
         <p className="signup-text">
-          Already not a member? <span className="signup-link">SignUp</span>
+          Already not a member? <a href="/signup" className="signup-link ">SignUp</a>
         </p>
         <p className="terms-text">
           By signing up, you agree to our <span>Terms of Service</span> and{" "}

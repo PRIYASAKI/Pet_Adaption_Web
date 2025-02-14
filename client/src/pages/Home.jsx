@@ -2,8 +2,15 @@ import React from 'react';
 import './styles.css';
 import logo from '../assets/logo.jpg';
 import logo_1 from '../assets/logo_1.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const App = () => {
+    const navigate=useNavigate();
+
+    const handleSubmit=(event)=>{
+        event.preventDefault();
+        navigate("/login");
+    }
     return (
         <div className="app-container">
             <header className="navbar">
@@ -13,13 +20,13 @@ const App = () => {
                 <h1>PET WORLD</h1>
                 <nav>
                     <ul className="nav-links">
-                        <li><a href="#"><h3>HOME</h3></a></li>
-                        <li><a href="#"><h3>PET LIST</h3></a></li>
-                        <li><a href="#"><h3>PET CARE TIPS</h3></a></li>
+                        <li><a href="/"><h3>HOME</h3></a></li>
+                        <li><a href="/pets"><h3>PET LIST</h3></a></li>
+                        <li><a href="/petscare"><h3>PET CARE TIPS</h3></a></li>
                         <li><a href="#"><h3>FORM</h3></a></li>
                     </ul>
                 </nav>
-                <button className="login-btn">LOGIN/SIGNUP</button>
+                <button className="login-btn" onClick={handleSubmit}>LOGIN/SIGNUP</button>
             </header>
             
             <div className="content"> {/* NEW WRAPPER */}

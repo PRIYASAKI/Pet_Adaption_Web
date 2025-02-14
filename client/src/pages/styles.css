@@ -85,7 +85,7 @@
   cursor: pointer;
   margin-top: 20px;
   border-radius: 5px;
-  margin-left: 20px;
+  margin-left: 120px;
 }
 
 html, body {
@@ -218,6 +218,8 @@ ul li {
 
 #login
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -329,4 +331,215 @@ ul li {
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer;
+}
+
+
+
+#petList
+
+
+.pet{
+  margin-top: 200px;
+}
+
+
+
+.pet-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 100px
+}
+
+.pet-card {
+  width: 350px;
+  padding: 15px;
+  background: #96669e;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pet-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.breeds-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.breed-box {
+  background: #c59db1;
+  padding: 10px;
+  border-radius: 5px;
+  width: 80%;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.breed {
+  font-weight: bold;
+  color: #f5f5f5;
+}
+
+.quote {
+  font-style: italic;
+  color: #f5f5f5;
+}
+
+.see-more-button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.see-more-button:hover {
+  background: #0056b3;
+}
+/* PetProfile.css */
+.pet-profile {
+  padding: 20px;
+}
+
+/* Carousel */
+.slick-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.slick-prev, .slick-next {
+  font-size: 18px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Breed Details */
+.breed-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center all breed details */
+  gap: 20px; /* Uniform gap between breed details */
+  margin-top: 20px;
+}
+
+/* Breeds Container */
+.breeds-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: space-between; /* Evenly space out items */
+  align-items: flex-start; /* Align items at the top */
+  gap: 20px; /* Uniform gap between breed cards */
+  width: 100%; /* Ensure it uses full width */
+  box-sizing: border-box; /* Ensure padding does not affect the width */
+}
+
+/* Breed Card */
+.breed-card {
+  flex: 1 1 300px; /* Allow cards to take 300px of the available space */
+  width: 300px; /* Ensure uniform width */
+  min-width: 300px; /* Ensure a minimum width for each card */
+  max-width: 300px; /* Set a max width to maintain consistency */
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box; /* Ensure padding does not affect the width */
+}
+
+/* Image inside Breed Card */
+.breed-card img {
+  width: 100%; /* Ensure breed images take full width of the card */
+  height: 200px; /* Set a fixed height for uniformity */
+  object-fit: cover; /* Ensure the image covers the area */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Adopt Button */
+.adopt-btn {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.adopt-btn:hover {
+  background-color: #218838;
+}
+/* For carousel image */
+.carousel-image {
+  max-width: 70%; /* Adjust the max width to reduce the size */
+  display: block; /* Center the image */
+  margin: 0 auto;
+}
+
+/* For breed images to be the same size */
+.breed-image {
+  width: 100%; /* Ensure breed images fill their container */
+  height: 200px; /* Set a fixed height for uniformity */
+  object-fit: cover; /* Ensure the image covers the area */
+}
+
+/* Styling for Pets' Background */
+.dog-background {
+  background-color: lightblue; /* Light blue background for dogs */
+}
+
+.rabbit-background {
+  background-color: lightgreen; /* Light green background for rabbits */
+}
+
+.parrot-background {
+  background-color: lightyellow;
+}
+
+.cat-background {
+  background-color: lightpink;
+}
+
+/* Different colors for each breed box */
+.breed-box:nth-child(1) {
+  background-color: #ff9999; /* Light red */
+}
+
+.breed-box:nth-child(2) {
+  background-color: #99ccff; /* Light blue */
+}
+
+.breed-box:nth-child(3) {
+  background-color: #99ff99; /* Light green */
+}
+
+.breed-box:nth-child(4) {
+  background-color: #ffcc99; /* Light orange */
+}
+
+.breed-box:nth-child(5) {
+  background-color: #ffccff; /* Light pink */
+}
+
+.breed-box:nth-child(6) {
+  background-color: #ffff99; /* Light yellow */
 }

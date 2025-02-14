@@ -1,41 +1,52 @@
-import React, { useState } from "react";
+import React from "react";
+import "./styles.css";
+import dog from "../assets/dog.webp";
+import { useNavigate } from "react-router-dom";
 
-function Signup() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+const Login = () => {
+const navigate=useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle signup logic
-  };
-
-  return (
-    <div className="signup">
-      <h1>Sign Up</h1>
-      <form onSubmit={handleSubmit}>
-        <label>Name:</label>
-        <input 
-          type="text" 
-          value={name} 
-          onChange={(e) => setName(e.target.value)} 
-        />
-        <label>Email:</label>
-        <input 
-          type="email" 
-          value={email} 
-          onChange={(e) => setEmail(e.target.value)} 
-        />
-        <label>Password:</label>
-        <input 
-          type="password" 
-          value={password} 
-          onChange={(e) => setPassword(e.target.value)} 
-        />
-        <button type="submit">Sign Up</button>
-      </form>
-    </div>
-  );
+const handleSubmit=(event)=>{
+  event.preventDefault();
+  alert("Signed in Successfully");
+  navigate("/");
 }
 
-export default Signup;
+  return (
+    <div className="login-container">
+      <div className="image-section">
+        <div className="image-placeholder">
+          <img src={dog} alt="Login" className="image-icon" />
+        </div>
+      </div>
+      <div className="login-section"> 
+        <h2 className="login-title">SignUp form</h2>
+        <form className="login-form">
+          <div className="input-group">
+            <span className="icon">🧒</span>
+            <input type="Name" placeholder="Name" />
+          </div>
+          <div className="input-group">
+            <span className="icon">📧</span>
+            <input type="email" placeholder="Email" />
+          </div>
+          <div className="input-group">
+            <span className="icon">🔒</span>
+            <input type="password" placeholder="Password" />
+          </div>
+          <button className="login-button" onClick={handleSubmit}>Sign Up</button>
+        </form>
+        <p className="signup-text">
+          Already a member? <a href="/login" className="login-link">Login</a>
+
+        </p>
+        <p className="terms-text">
+          By signing up, you agree to our <span>Terms of Service</span> and{" "}
+          <span>Privacy Policy</span>.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default Login;
