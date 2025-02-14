@@ -434,6 +434,7 @@ ul li {
   justify-content: center; /* Center all breed details */
   gap: 20px; /* Uniform gap between breed details */
   margin-top: 20px;
+  background: linear-gradient(to right, #7fff5f, #f3f565); /* Double color background */
 }
 
 /* Breeds Container */
@@ -520,26 +521,4 @@ ul li {
 }
 
 /* Different colors for each breed box */
-.breed-box:nth-child(1) {
-  background-color: #ff9999; /* Light red */
-}
 
-.breed-box:nth-child(2) {
-  background-color: #99ccff; /* Light blue */
-}
-
-.breed-box:nth-child(3) {
-  background-color: #99ff99; /* Light green */
-}
-
-.breed-box:nth-child(4) {
-  background-color: #ffcc99; /* Light orange */
-}
-
-.breed-box:nth-child(5) {
-  background-color: #ffccff; /* Light pink */
-}
-
-.breed-box:nth-child(6) {
-  background-color: #ffff99; /* Light yellow */
-}

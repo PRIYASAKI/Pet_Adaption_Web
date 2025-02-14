@@ -76,7 +76,7 @@ const PetProfile = () => {
     <div className={`pet-profile ${pets.find(pet => pet.type === petType)?.backgroundClass}`}>
       <Slider {...settings}>
         {pets.map((pet, index) => (
-          <div key={index}>
+          <div key={index} className="color">
             <img src={pet.img} alt={pet.type} className="carousel-image" />
           </div>
         ))}
