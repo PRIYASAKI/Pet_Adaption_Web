@@ -11,8 +11,10 @@ import Signup from "./pages/Signup";
 import PetCareTips from "./pages/PetCareTips";
 import Application from "./pages/Application";
 
+
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import PetAll from "./pages/PetAll";
 
 
 
@@ -29,6 +31,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/petall" element={<PetAll />} />
+
       </Routes>
     </Router>
   );

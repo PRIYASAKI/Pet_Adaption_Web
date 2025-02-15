@@ -355,7 +355,7 @@ ul li {
 .pet-card {
   width: 350px;
   padding: 15px;
-  background: #96669e;
+  background: #bd24d7;
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -377,12 +377,14 @@ ul li {
 }
 
 .breed-box {
-  background: #c59db1;
+  background: #cb82c0;
   padding: 10px;
   border-radius: 5px;
+  margin-left: 30px;
   width: 80%;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap:10px;
 }
 
 .breed {
@@ -432,7 +434,7 @@ ul li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Center all breed details */
-  gap: 20px; /* Uniform gap between breed details */
+  gap: 10px; /* Uniform gap between breed details */
   margin-top: 20px;
   background: linear-gradient(to right, #7fff5f, #f3f565); /* Double color background */
 }
@@ -443,7 +445,7 @@ ul li {
   flex-wrap: wrap; /* Allow wrapping */
   justify-content: space-between; /* Evenly space out items */
   align-items: flex-start; /* Align items at the top */
-  gap: 20px; /* Uniform gap between breed cards */
+  gap: 10px; /* Uniform gap between breed cards */
   width: 100%; /* Ensure it uses full width */
   box-sizing: border-box; /* Ensure padding does not affect the width */
 }
@@ -451,19 +453,21 @@ ul li {
 /* Breed Card */
 .breed-card {
   flex: 1 1 300px; /* Allow cards to take 300px of the available space */
-  width: 300px; /* Ensure uniform width */
-  min-width: 300px; /* Ensure a minimum width for each card */
+  width: 100px; /* Ensure uniform width */
+  min-width: 100px; /* Ensure a minimum width for each card */
   max-width: 300px; /* Set a max width to maintain consistency */
   text-align: center;
   border: 1px solid #ddd;
-  padding: 20px;
+  padding: 15px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box; /* Ensure padding does not affect the width */
+  box-sizing: border-box;
+  margin-left: 80px; /* Ensure padding does not affect the width */
+  gap: 10px;
 }
 
 /* Image inside Breed Card */
@@ -489,18 +493,27 @@ ul li {
 .adopt-btn:hover {
   background-color: #218838;
 }
-/* For carousel image */
+/* For carousel images */
 .carousel-image {
-  max-width: 70%; /* Adjust the max width to reduce the size */
-  display: block; /* Center the image */
-  margin: 0 auto;
+  width: 80%; /* Take full width of the container */
+  max-width: 400px; /* Set a max width to maintain consistency */
+  height: 300px; /* Set a fixed height for uniformity */
+  object-fit: cover; /* Ensure the image covers the entire space */
+  display: block; /* Prevent inline spacing issues */
+  margin: 0 auto; /* Center the image */
+  border-radius: 10px;
+  border-radius: 50%; 
+  margin-top: 20px; /* Optional: rounded corners */
 }
+
 
 /* For breed images to be the same size */
 .breed-image {
   width: 100%; /* Ensure breed images fill their container */
   height: 200px; /* Set a fixed height for uniformity */
   object-fit: cover; /* Ensure the image covers the area */
+  gap: 80px;
+  justify-content: space-between;
 }
 
 /* Styling for Pets' Background */
@@ -520,5 +533,87 @@ ul li {
   background-color: lightpink;
 }
 
+
+
+
 /* Different colors for each breed box */
+
+
+/* Full-page background image */
+.application-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../assets/bg.avif") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dark overlay for readability */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Form Styling */
+.form-box {
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  z-index: 1;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.checkbox-container input {
+  margin-right: 5px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  background: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #cc5200;
+}
+
 

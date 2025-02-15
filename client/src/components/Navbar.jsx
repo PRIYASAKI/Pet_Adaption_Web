@@ -4,6 +4,13 @@ import "./styles.css";
 import logo from "../assets/logo.jpg";
 
 const Navbar = () => {
+   const navigate = useNavigate();
+  
+      const handleClick = (event) => {
+          event.preventDefault();
+          alert("Logged Out successfully");
+          navigate("/");
+      };
   return (
     <header className="navbar">
       <div className="logo-container">
@@ -18,7 +25,7 @@ const Navbar = () => {
           <li><Link to="/application"><h3>FORM</h3></Link></li>
         </ul>
       </nav>
-      <button className="login-btn"><Link to="/login">LOGIN/SIGNUP</Link></button>
+      <button className="login-btn" onClick={handleClick}><Link to="/login">LOGOUT</Link></button>
     </header>
   );
 };

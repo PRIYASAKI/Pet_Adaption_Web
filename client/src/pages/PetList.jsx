@@ -43,7 +43,25 @@ const pets = [
       { breed: "African Grey", quote: "Intelligent and witty!" }
     ],
     img: parrotImg
-  }
+  },
+  {
+    type: "Dog",
+    breeds: [
+      { breed: "Golden Retriever", quote: "Loyalty in every paw!" },
+      { breed: "Labrador", quote: "Friendly and outgoing!" },
+      { breed: "German Shepherd", quote: "Courage and confidence!" }
+    ],
+    img: dogImg
+  },
+  {
+    type: "Cat",
+    breeds: [
+      { breed: "Persian Cat", quote: "Purr-fectly adorable!" },
+      { breed: "Siamese", quote: "Elegant and talkative!" },
+      { breed: "Maine Coon", quote: "Gentle giant!" }
+    ],
+    img: catImg
+  },
 ];
 
 const PetList = () => {

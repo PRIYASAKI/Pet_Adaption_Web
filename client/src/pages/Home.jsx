@@ -7,10 +7,19 @@ import { useNavigate } from 'react-router-dom';
 const App = () => {
     const navigate=useNavigate();
 
-    const handleSubmit=(event)=>{
+    
+    const handleClick =(event)=>{
         event.preventDefault();
-        navigate("/login");
+        navigate("/petall");
     }
+
+   
+  
+      const handleCLick = (event) => {
+          event.preventDefault();
+          alert("Logged Out successfully");
+          navigate("/login");
+      };
     return (
         <div className="app-container">
             <header className="navbar">
@@ -23,10 +32,10 @@ const App = () => {
                         <li><a href="/"><h3>HOME</h3></a></li>
                         <li><a href="/pets"><h3>PET LIST</h3></a></li>
                         <li><a href="/petscare"><h3>PET CARE TIPS</h3></a></li>
-                        <li><a href="#"><h3>FORM</h3></a></li>
+                        <li><a href="/application"><h3>FORM</h3></a></li>
                     </ul>
                 </nav>
-                <button className="login-btn" onClick={handleSubmit}>LOGIN/SIGNUP</button>
+                <button className="login-btn" onClick={handleCLick}>LOGOUT</button>
             </header>
             
             <div className="content"> {/* NEW WRAPPER */}
@@ -34,7 +43,7 @@ const App = () => {
                     <div className="hero-text">
                         <h1>Welcome to Pet World</h1>
                         <h3>"Find Your Furry Best Friend Today!" 🐾 🐈</h3>
-                        <button className="cta-btn">CLICK HERE</button>
+                        <button className="cta-btn" onClick={handleClick}>CLICK HERE</button>
                     </div>
                     <div className="image-container">
                         <img src={logo_1} alt="Pet Image" className="hero-image" />

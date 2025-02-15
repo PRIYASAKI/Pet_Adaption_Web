@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import "./styles.css"; // Import the CSS file
+import "./styles.css"; // Import CSS for styling
+import { useNavigate } from "react-router-dom";
 
 const Application = () => {
+
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     contact: "",
@@ -11,8 +14,6 @@ const Application = () => {
     lifestyle: "",
     agreement: false,
   });
-
-  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -24,73 +25,47 @@ const Application = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (!formData.agreement) {
       alert("You must agree to provide proper care before submitting.");
       return;
     }
-
-    setSubmitted(true);
-    alert("Submitted successfully!");
-
-    console.log("Form Data:", formData);
+    alert("Application Submitted Successfully!");
+    console.log("Form submitted:", formData);
+    navigate("/");
   };
 
   return (
-    <div className="bg">
-    <div className="container">
-      <div className="form-container">
-        <h2>📝 Adoption Application Form</h2>
+    <div className="application-container">
+      <div className="overlay"></div> 
+      <div className="form-box">
+        <h2>Pet Adoption Application</h2>
+        <form onSubmit={handleSubmit}>
+          <label>Name:</label>
+          <input type="text" name="name" value={formData.name} onChange={handleChange} required />
 
-        {submitted ? (
-          <p className="success-message">✅ Submitted successfully!</p>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label>Full Name:</label>
-              <input type="text" name="name" value={formData.name} onChange={handleChange} required />
-            </div>
+          <label>Contact:</label>
+          <input type="text" name="contact" value={formData.contact} onChange={handleChange} required />
 
-            <div>
-              <label>Contact Number:</label>
-              <input type="tel" name="contact" value={formData.contact} onChange={handleChange} required />
-            </div>
+          <label>Address:</label>
+          <input type="text" name="address" value={formData.address} onChange={handleChange} required />
 
-            <div>
-              <label>Address:</label>
-              <textarea name="address" value={formData.address} onChange={handleChange} required />
-            </div>
+          <label>Do you have pet experience?</label>
+          <input type="text" name="experience" value={formData.experience} onChange={handleChange} required />
 
-            <div>
-              <label>Do you have experience with pets?</label>
-              <select name="experience" value={formData.experience} onChange={handleChange} required>
-                <option value="">Select...</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-                <option value="Some Experience">Some Experience</option>
-              </select>
-            </div>
+          <label>Describe your home setup:</label>
+          <input type="text" name="homeSetup" value={formData.homeSetup} onChange={handleChange} required />
 
-            <div>
-              <label>What is your home setup like?</label>
-              <input type="text" name="homeSetup" value={formData.homeSetup} onChange={handleChange} required />
-            </div>
+          <label>Describe your lifestyle:</label>
+          <input type="text" name="lifestyle" value={formData.lifestyle} onChange={handleChange} required />
 
-            <div>
-              <label>Describe your daily lifestyle:</label>
-              <textarea name="lifestyle" value={formData.lifestyle} onChange={handleChange} required />
-            </div>
+          <div className="checkbox-container">
+            <input type="checkbox" name="agreement" checked={formData.agreement} onChange={handleChange} />
+            <span>I agree to provide proper care for my pet.</span>
+          </div>
 
-            <div className="flex items-center">
-              <input type="checkbox" name="agreement" checked={formData.agreement} onChange={handleChange} required />
-              <label>I agree to provide proper care for the adopted pet.</label>
-            </div>
-
-            <button type="submit">📩 Submit Application</button>
-          </form>
-        )}
+          <button className="btn-submit" type="submit">Submit Application</button>
+        </form>
       </div>
-    </div>
     </div>
   );
 };
