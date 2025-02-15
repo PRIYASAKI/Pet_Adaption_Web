@@ -617,3 +617,53 @@ button:hover {
 }
 
 
+
+/* Profile Section */
+.profile-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+/* Profile Image */
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  min-width: 150px;
+  text-align: center;
+}
+
+.dropdown-menu p {
+  margin: 0;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.logout-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+
+

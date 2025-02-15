@@ -1,25 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles.css';
 import logo from '../assets/logo.jpg';
 import logo_1 from '../assets/logo_1.jpg';
+import defaultProfile from '../assets/profile1.png';
 import { useNavigate } from 'react-router-dom';
 
-const App = () => {
-    const navigate=useNavigate();
+const Home = () => {
+    const navigate = useNavigate();
+    const [username, setUsername] = useState('');
+    const [profileImage, setProfileImage] = useState(defaultProfile);
+    const [showDropdown, setShowDropdown] = useState(false);
 
-    
-    const handleClick =(event)=>{
-        event.preventDefault();
-        navigate("/petall");
-    }
+    // Fetch username and profile image from local storage
+    useEffect(() => {
+        const storedUsername = localStorage.getItem('username');
+        const storedProfile = localStorage.getItem('profileImage');
 
-   
-  
-      const handleCLick = (event) => {
-          event.preventDefault();
-          alert("Logged Out successfully");
-          navigate("/login");
-      };
+        console.log("Stored Username:", storedUsername); // Debugging
+        console.log("Stored Profile Image:", storedProfile); // Debugging
+
+        if (storedUsername) {
+            setUsername(storedUsername);
+        }
+        if (storedProfile) {
+            setProfileImage(storedProfile);
+        }
+    }, []);
+
+    // Toggle dropdown visibility
+    const toggleDropdown = () => {
+        setShowDropdown(prev => !prev);
+        console.log("Dropdown toggled. Username:", username); // Debugging
+    };
+
+    // Logout function
+    const handleLogout = () => {
+        localStorage.removeItem('username');
+        localStorage.removeItem('profileImage');
+        alert("Logged Out successfully");
+        navigate("/login");
+    };
+
     return (
         <div className="app-container">
             <header className="navbar">
@@ -35,15 +56,32 @@ const App = () => {
                         <li><a href="/application"><h3>FORM</h3></a></li>
                     </ul>
                 </nav>
-                <button className="login-btn" onClick={handleCLick}>LOGOUT</button>
+
+                {/* Profile Section */}
+                <div className="profile-container">
+                    <img 
+                        src={profileImage} 
+                        alt="Profile" 
+                        className="profile-img" 
+                        onClick={toggleDropdown} 
+                    />
+
+                    {/* Dropdown */}
+                    {showDropdown && (
+                        <div className="dropdown-menu">
+                            <p><strong>{username ? username : "Guest"}</strong></p> {/* Display Logged-in Username */}
+                            <button className="logout-btn" onClick={handleLogout}>LOGOUT</button>
+                        </div>
+                    )}
+                </div>
             </header>
             
-            <div className="content"> {/* NEW WRAPPER */}
+            <div className="content">
                 <main className="hero-section">
                     <div className="hero-text">
                         <h1>Welcome to Pet World</h1>
                         <h3>"Find Your Furry Best Friend Today!" 🐾 🐈</h3>
-                        <button className="cta-btn" onClick={handleClick}>CLICK HERE</button>
+                        <button className="cta-btn" onClick={() => navigate("/petall")}>CLICK HERE</button>
                     </div>
                     <div className="image-container">
                         <img src={logo_1} alt="Pet Image" className="hero-image" />
@@ -72,4 +110,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default Home;
